@@ -1,4 +1,4 @@
-package com.devcolibri.servlet;
+package com.servlet;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,8 +19,6 @@ public class MainServlet extends HttpServlet {
 
         String varTextA = "Hello World!";
         request.setAttribute("title", varTextA);
-        String varTextB = "It JSP.";
-        request.setAttribute("textB", varTextB);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);}
