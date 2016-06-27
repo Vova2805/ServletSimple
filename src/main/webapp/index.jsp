@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html >
@@ -6,10 +7,10 @@
     <title>${title}</title>
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="/resources/css/normalize.css">
 
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/resources/css/style.css">
 
 </head>
 
@@ -24,7 +25,8 @@
 
     <div class="tab-content">
         <div id="signup">
-            <h1>Sign Up for Free</h1>
+            <c:set var="signUp" value="Sign Up for Free"/>
+            <h1>${signUp}</h1>
 
             <form action="/">
 
@@ -58,7 +60,7 @@
                     <input type="password"required autocomplete="off"/>
                 </div>
 
-                <button type="submit" class="button button-block"/>Get Started</button>
+                <button type="submit" onclick="window.location.href = 'welcome';" class="button button-block"/>Get Started</button>
 
             </form>
 
@@ -96,6 +98,6 @@
 </div> <!-- /form -->
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-<script src="js/index.js"></script>
+<script src="/resources/js/index.js"></script>
 </body>
 </html>
